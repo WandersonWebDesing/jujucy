@@ -1,0 +1,47 @@
+:root {
+  --roxo: #8A2BE2;
+  --laranja: #FF7F50;
+  --cinza-claro: #F5F5F5;
+}
+
+/* Cores Personalizadas */
+.bg-roxo { background-color: var(--roxo); }
+.bg-laranja { background-color: var(--laranja); }
+.bg-cinza-claro { background-color: var(--cinza-claro); }
+.text-roxo { color: var(--roxo); }
+.text-laranja { color: var(--laranja); }
+
+/* Botões */
+.btn-laranja {
+  background-color: var(--laranja);
+  color: white;
+  border: none;
+}
+.btn-laranja:hover {
+  background-color: #e06a3a;
+  color: white;
+}
+
+/* Navbar */
+.navbar-brand span.text-laranja {
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--roxo), #6A1B9A);
+}
+
+/* Cards de Produtos */
+.card {
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  padding: 1.5rem;
+}
