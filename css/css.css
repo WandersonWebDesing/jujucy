@@ -1,47 +1,292 @@
-:root {
-  --roxo: #8A2BE2;
-  --laranja: #FF7F50;
-  --cinza-claro: #F5F5F5;
-}
+/* css/css.css */
 
 /* Cores Personalizadas */
-.bg-roxo { background-color: var(--roxo); }
-.bg-laranja { background-color: var(--laranja); }
-.bg-cinza-claro { background-color: var(--cinza-claro); }
-.text-roxo { color: var(--roxo); }
-.text-laranja { color: var(--laranja); }
-
-/* Botões */
-.btn-laranja {
-  background-color: var(--laranja);
-  color: white;
-  border: none;
+:root {
+  --roxo-inovajucy: #6f42c1; /* Um roxo vibrante */
+  --laranja-inovajucy: #fd7e14; /* Um laranja que se destaca */
+  --cinza-claro-inovajucy: #f8f9fa; /* Um cinza bem claro para seções */
 }
-.btn-laranja:hover {
-  background-color: #e06a3a;
+
+.bg-roxo {
+  background-color: var(--roxo-inovajucy) !important;
+}
+
+.text-roxo {
+  color: var(--roxo-inovajucy) !important;
+}
+
+.btn-laranja {
+  background-color: var(--laranja-inovajucy);
   color: white;
+  border-color: var(--laranja-inovajucy);
+}
+
+.btn-laranja:hover {
+  background-color: #e66a00; /* Um tom mais escuro de laranja no hover */
+  border-color: #e66a00;
+  color: white;
+}
+
+.bg-cinza-claro {
+  background-color: var(--cinza-claro-inovajucy) !important;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: 'Poppins', sans-serif; /* Exemplo de fonte moderna, você precisaria importar */
+  padding-top: 66px; /* Para compensar a navbar fixa */
 }
 
 /* Navbar */
-.navbar-brand span.text-laranja {
-  font-weight: 700;
+.navbar-brand img {
+  max-height: 40px;
+  transition: transform 0.3s ease;
 }
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--laranja-inovajucy) !important;
+}
+
+
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 28px;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-fixo:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+    text-decoration: none;
+  }
+
+
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--roxo), #6A1B9A);
+  min-height: calc(100vh - 66px); /* Altura total da viewport menos a navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/hero-background.jpg'); /* Adicione uma imagem de fundo para o hero */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
 }
 
-/* Cards de Produtos */
-.card {
-  transition: transform 0.3s;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay escuro para melhor legibilidade do texto */
+  z-index: -1;
 }
-.card:hover {
+
+.hero h1 {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p.lead {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+/* Seções de Conteúdo */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+section h2 u {
+  text-decoration-color: var(--laranja-inovajucy);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+
+/* Cards de Produto */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+.product-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Carrossel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  padding: 1.5rem;
+.product-card img {
+  object-fit: cover;
+  height: 200px; /* Altura fixa para as imagens dos produtos */
+}
+
+.product-card .card-title {
+  min-height: 50px; /* Garante altura mínima para títulos longos */
+}
+
+.product-card .card-text {
+  min-height: 40px; /* Garante altura mínima para descrições curtas */
+}
+
+/* Carrossel de Promoções */
+#promoCarousel .carousel-item img {
+  max-height: 450px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+#promoCarousel .carousel-control-prev-icon,
+#promoCarousel .carousel-control-next-icon {
+  background-color: var(--roxo-inovajucy);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+/* Newsletter */
+#contato .form-control {
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: none;
+}
+
+#contato .btn-laranja {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Footer */
+.social-icon {
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--laranja-inovajucy) !important;
+  transform: translateY(-3px);
+}
+
+/* Modal de Produto */
+#productModal .modal-header {
+  border-bottom: none;
+}
+
+#productModal .modal-title {
+  font-size: 1.8rem;
+}
+
+#productModal .modal-body img {
+  border: 1px solid #eee;
+}
+
+#productModal .modal-footer {
+  border-top: none;
+}
+
+/* Animações (se você usar Animate.css, inclua o CDN no head) */
+/* Ex: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> */
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p.lead {
+    font-size: 1.2rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .footer .text-md-start,
+  .footer .text-md-end {
+    text-align: center !important;
+  }
+
+  #productModal .col-md-5,
+  #productModal .col-md-7 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p.lead {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-card .card-title {
+    font-size: 1.1rem;
+  }
+
+  .product-card .card-text {
+    font-size: 0.9rem;
+  }
+
+  .product-card .fw-bold.text-roxo {
+    font-size: 1.2rem !important;
+  }
+
+  #contato .input-group {
+    flex-direction: column;
+  }
+
+  #contato .form-control,
+  #contato .btn-laranja {
+    border-radius: 0.5rem !important;
+    width: 100%;
+  }
+
+  #contato .form-control {
+    margin-bottom: 10px;
+  }
 }
