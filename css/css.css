@@ -1,12 +1,22 @@
-/* css/css.css */
-
-/* Cores Personalizadas */
 :root {
-  --roxo-inovajucy: #6f42c1; /* Um roxo vibrante */
-  --laranja-inovajucy: #fd7e14; /* Um laranja que se destaca */
-  --cinza-claro-inovajucy: #f8f9fa; /* Um cinza bem claro para seções */
+  --roxo-inovajucy: #5e2a84;
+  --laranja-inovajucy: #ff914d;
+  --cinza-claro-inovajucy: #f8f9fa;
+  --cor-azul-marinho-mes-dos-homens: #003366;
+  --cor-roxo-diadospais: #420658;
 }
 
+/* Estilos Gerais */
+body {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 66px; /* Para compensar a navbar fixa */
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* Classes de Cores e Estilos */
 .bg-roxo {
   background-color: var(--roxo-inovajucy) !important;
 }
@@ -15,26 +25,25 @@
   color: var(--roxo-inovajucy) !important;
 }
 
-.btn-laranja {
-  background-color: var(--laranja-inovajucy);
-  color: white;
-  border-color: var(--laranja-inovajucy);
-}
-
-.btn-laranja:hover {
-  background-color: #e66a00; /* Um tom mais escuro de laranja no hover */
-  border-color: #e66a00;
-  color: white;
-}
-
 .bg-cinza-claro {
   background-color: var(--cinza-claro-inovajucy) !important;
 }
 
-/* Estilos Gerais */
-body {
-  font-family: 'Poppins', sans-serif; /* Exemplo de fonte moderna, você precisaria importar */
-  padding-top: 66px; /* Para compensar a navbar fixa */
+.btn-laranja {
+  background-color: var(--laranja-inovajucy);
+  color: white;
+  border-color: var(--laranja-inovajucy);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.btn-laranja:hover {
+  background-color: #e96a00;
+  border-color: #e96a00;
+  color: white;
+}
+
+.text-laranja {
+  color: var(--laranja-inovajucy) !important;
 }
 
 /* Navbar */
@@ -57,57 +66,13 @@ body {
   color: var(--laranja-inovajucy) !important;
 }
 
-/*botão wthasapp*/
-.whatsapp-fixo {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    padding: 15px;
-    font-size: 28px;
-    z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-  }
-
-  .whatsapp-fixo:hover {
-    transform: scale(1.1);
-    background-color: #1ebe5d;
-    text-decoration: none;
-  }
-
-/*Botão instagram*/
-.instagram-fixo {
-      position: fixed;
-      bottom: 90px; /* Adjust this value to position it above the WhatsApp button */
-      right: 20px;
-      z-index: 1000;
-      background-color: #E4405F; /* Instagram brand color */
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2em;
-      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    .instagram-fixo:hover {
-      transform: scale(1.1);
-    }
-
 /* Hero Section */
 .hero {
-  min-height: calc(100vh - 66px); /* Altura total da viewport menos a navbar */
+  min-height: calc(100vh - 66px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../img/hero-background.jpg'); /* Adicione uma imagem de fundo para o hero */
+  background-image: url('../img/hero-background.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -121,7 +86,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* Overlay escuro para melhor legibilidade do texto */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
 
@@ -136,11 +101,7 @@ body {
   margin: 0 auto 2rem;
 }
 
-/* Seções de Conteúdo */
-section {
-  padding: 80px 0;
-}
-
+/* Títulos de Seção */
 section h2 {
   font-size: 2.8rem;
   font-weight: bold;
@@ -155,29 +116,33 @@ section h2 u {
   text-underline-offset: 8px;
 }
 
-
-/* Cards de Produto */
-.product-card {
+/* Cards de Produto e Depoimento */
+.product-card,
+.testimonial-card,
+.card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Garante que a imagem não vaze */
+  overflow: hidden;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
+.product-card:hover,
+.testimonial-card:hover,
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  cursor: pointer;
 }
 
 .product-card img {
   object-fit: cover;
-  height: 200px; /* Altura fixa para as imagens dos produtos */
+  height: 200px;
 }
 
 .product-card .card-title {
-  min-height: 50px; /* Garante altura mínima para títulos longos */
+  min-height: 50px;
 }
 
 .product-card .card-text {
-  min-height: 40px; /* Garante altura mínima para descrições curtas */
+  min-height: 40px;
 }
 
 /* Carrossel de Promoções */
@@ -204,15 +169,75 @@ section h2 u {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-/* Footer */
-.social-icon {
+/* Botões sociais e de contato */
+.social-icon,
+.social-hover {
   font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-icon:hover {
+.social-icon:hover,
+.social-hover:hover {
   color: var(--laranja-inovajucy) !important;
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.2);
+}
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 28px;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+  text-decoration: none;
+}
+
+/* Grupo flutuante de redes sociais no canto inferior direito */
+.redes-flutuantes {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-social {
+  background-color: var(--roxo-inovajucy);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.3s;
+  text-align: center;
+}
+
+.btn-social:hover {
+  transform: scale(1.2);
+}
+
+.btn-social.whatsapp:hover {
+  background-color: #25d366;
+}
+
+.btn-social.instagram:hover {
+  background-color: #e1306c;
+}
+
+.btn-social.facebook:hover {
+  background-color: #3b5998;
 }
 
 /* Modal de Produto */
@@ -232,39 +257,233 @@ section h2 u {
   border-top: none;
 }
 
-/* Animações (se você usar Animate.css, inclua o CDN no head) */
-/* Ex: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> */
+/* Seção de Depoimentos */
+#depoimentos {
+  background-color: var(--cinza-claro-inovajucy);
+}
+
+.testimonial-card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.testimonial-card .card-body {
+  font-style: italic;
+  color: #495057;
+  padding: 2rem;
+}
+
+.testimonial-card .card-footer {
+  background-color: transparent;
+  border-top: 1px solid #e9ecef;
+  padding: 1.5rem 2rem;
+}
+
+.testimonial-card .card-footer img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.testimonial-card .card-footer h6 {
+  color: var(--cor-roxo-diadospais);
+  font-weight: 600;
+}
+
+/* Seção de Homenagem (Dia dos Pais / Mês dos Homens) */
+#diadospais {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--cor-roxo-diadospais), #2a0437);
+  color: var(--cor-branco);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#diadospais::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulsar 20s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes pulsar {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 0.6; }
+  100% { transform: scale(1) rotate(360deg); opacity: 0.8; }
+}
+
+#diadospais-content {
+  position: relative;
+  z-index: 1;
+}
+
+#diadospais-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  color: var(--laranja-inovajucy);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#diadospais-heading u {
+  text-decoration: none;
+  border-bottom: 5px solid var(--cinza-claro-inovajucy);
+  padding-bottom: 8px;
+}
+
+#diadospais .lead {
+  font-size: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.mes-dos-homens-titulo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--cor-azul-marinho-mes-dos-homens);
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Botões de filtro */
+.filter-btn {
+  border: 2px solid var(--laranja-inovajucy);
+  color: var(--cor-branco);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 8px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.filter-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--laranja-inovajucy);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.filter-btn:hover::before,
+.filter-btn.active::before {
+  width: 100%;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  color: white;
+  border-color: var(--laranja-inovajucy);
+  transform: translateY(-3px);
+}
+
+/* Icones de Acessibilidade e Libras (Novo) */
+.acessibilidade-flutuante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-acessibilidade {
+  width: 50px;
+  height: 50px;
+  background-color: var(--roxo-inovajucy);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-acessibilidade:hover {
+  transform: scale(1.1);
+}
+
+.btn-acessibilidade.libras:hover {
+  background-color: #25d366; /* Verde de destaque para Libras */
+}
+
+.btn-acessibilidade.acessibility:hover {
+  background-color: var(--laranja-inovajucy); /* Laranja de destaque */
+}
 
 /* Responsividade */
+@media (max-width: 992px) {
+  #diadospais {
+    padding: 60px 0;
+  }
+  #diadospais-heading {
+    font-size: 2.5rem;
+  }
+  #diadospais .lead {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
   }
-
   .hero p.lead {
     font-size: 1.2rem;
   }
-
   section h2 {
     font-size: 2rem;
   }
-
   .navbar-brand {
     font-size: 1.2rem;
   }
-
   .navbar-nav {
     text-align: center;
   }
-
   .footer .text-md-start,
   .footer .text-md-end {
     text-align: center !important;
   }
-
   #productModal .col-md-5,
   #productModal .col-md-7 {
     text-align: center;
+  }
+  #diadospais-heading {
+    font-size: 2rem;
+  }
+  #diadospais .lead {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .filter-btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+    margin: 5px;
   }
 }
 
@@ -272,46 +491,33 @@ section h2 u {
   .hero h1 {
     font-size: 2rem;
   }
-
   .hero p.lead {
     font-size: 1rem;
   }
-
   section {
     padding: 60px 0;
   }
-
   section h2 {
     font-size: 1.8rem;
   }
-
   .product-card .card-title {
     font-size: 1.1rem;
   }
-
   .product-card .card-text {
     font-size: 0.9rem;
   }
-
   .product-card .fw-bold.text-roxo {
     font-size: 1.2rem !important;
   }
-
   #contato .input-group {
     flex-direction: column;
   }
-
   #contato .form-control,
   #contato .btn-laranja {
     border-radius: 0.5rem !important;
     width: 100%;
   }
-
   #contato .form-control {
     margin-bottom: 10px;
   }
 }
-
-
-
-

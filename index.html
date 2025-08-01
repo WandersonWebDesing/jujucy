@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InovaJucyAchadinhos | Achados Incríveis com Preço Jucy e Entrega Rápida</title>
-  
+
   <meta name="description" content="Encontre os melhores achados da internet em informática, brinquedos, decoração e utilidades domésticas. Preço Jucy, frete rápido e compra facilitada via WhatsApp.">
   <meta name="keywords" content="achadinhos, ofertas, promoções, informática, brinquedos, decoração, utilidades domésticas, loja virtual, WhatsApp, entrega rápida, InovaJucyAchadinhos">
   <meta name="author" content="InovaJucyAchadinhos">
@@ -27,11 +27,12 @@
   <link rel="manifest" href="img/site.webmanifest">
   <link rel="icon" href="img/icom/favicon-32x32.png" type="image/x-icon" />
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="css/style.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-8G31FX78HS"></script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8G31FX78HS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -39,46 +40,99 @@
     gtag('config', 'G-8G31FX78HS');
   </script>
 
+  <button type="button" id="hs_show_banner_button"
+    style="background-color: #425b76; border: 1px solid #425b76;
+    border-radius: 3px; padding: 10px 16px; text-decoration: none; color: #fff;
+    font-family: inherit; font-size: inherit; font-weight: normal; line-height: inherit;
+    text-align: left; text-shadow: none;"
+    onClick="(function(){
+    var _hsp = window._hsp = window._hsp || [];
+    _hsp.push(['showBanner']);
+    })()"
+  >
+    Configurações de cookies
+  </button>
+
   <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/50308008.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-roxo fixed-top" aria-label="Navegação Principal do Site">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#home">
-          <img src="img/logo.png" alt="Logo da InovaJucyAchadinhos" class="img-fluid me-2" style="max-height: 40px;">
-          <span class="fw-bold">InovaJucy</span><span class="text-laranja">Achadinhos</span>
+<header>
+  <nav class="navbar navbar-dark bg-roxo fixed-top shadow-sm py-2">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="img/logo.png" alt="Logo InovaJucyAchadinhos" class="img-fluid me-2" style="max-height: 40px;">
+        <span class="fw-bold text-white">InovaJucy</span><span class="text-laranja">Achadinhos</span>
+      </a>
+
+      <div class="redes-topo d-flex align-items-center gap-3">
+        <a href="https://wa.me/5561999602738" class="social-icon" target="_blank" aria-label="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação do menu">
-          <span class="navbar-toggler-icon"></span>
+        <a href="https://www.instagram.com/inovajucyachadinhos" class="social-icon" target="_blank" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/inovajucyachadinhos" class="social-icon" target="_blank" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <button class="btn btn-outline-light d-lg-none ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
+          <i class="bi bi-list" style="font-size: 1.5rem;"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#promocoes">Promoções</a></li>
-            <li class="nav-item"><a class="nav-link" href="#nossaessencia">Nossa Essência</a></li>
-          </ul>
+      </div>
+
+      <div class="d-none d-lg-flex">
+        <ul class="navbar-nav ms-auto flex-row gap-4">
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#produtos">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#promocoes">Promoções</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#depoimentos">Depoimentos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#nossaessencia">Nossa Essência</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <button class="btn btn-acessibilidade" aria-label="Ativar recursos de acessibilidade" onclick="abrirAcessibilidade()">
+    ♿ Acessibilidade
+  </button>
+
+  <div class="offcanvas offcanvas-start bg-roxo text-white" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold" id="menuLateralLabel">InovaJucy</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-white" href="#home">🏠 Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#produtos">🛍️ Produtos</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#promocoes">🔥 Promoções</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#depoimentos">💬 Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#nossaessencia">✨ Nossa Essência</a></li>
+      </ul>
+      <div class="mt-4">
+        <p class="fw-bold">Siga-nos:</p>
+        <div class="d-flex gap-3">
+          <a href="https://wa.me/5561999788904" class="text-white fs-4" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.instagram.com/inovajucyachadinhos" class="text-white fs-4" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/inovajucyachadinhos" class="text-white fs-4" target="_blank"><i class="bi bi-facebook"></i></a>
         </div>
       </div>
-    </nav>
-  </header>
+    </div>
+  </div>
 
   <div class="social-buttons-fixed">
-    <a href="https://www.instagram.com/inovajucyachadinhos" target="_blank" class="instagram-fixo" aria-label="Siga-nos no Instagram para mais achadinhos">
-      <i class="fab fa-instagram" aria-hidden="true"></i>
-    </a>
     <a href="https://wa.me/5561999602738?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20e%20gostaria%20de%20me%20informar%20melhor%20sobre%20como%20realizar%20uma%20compra." target="_blank" class="whatsapp-fixo" aria-label="Fale conosco pelo WhatsApp para tirar suas dúvidas e fazer um pedido">
       <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
   </div>
 
-  <main>
+<main>
     <section id="home" class="hero bg-roxo text-white py-5 d-flex align-items-center min-vh-100" aria-labelledby="home-heading">
-      <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown" id="home-heading">Achou! E ainda tá barato! 😉</h1>
-        <p class="lead mb-4 animate__animated animate__fadeInUp">Os melhores achados da internet, com frete rápido e preço Jucy!</p>
-        <a href="#produtos" class="btn btn-laranja btn-lg mt-3 animate__animated animate__zoomIn">Ver Produtos</a>
+      <div class="container text-center animate__animated animate__fadeInUp">
+        <img src="img/logo.png" alt="InovaJucy" class="img-fluid mb-4 animate__fadeInUp" style="max-width: 200px;">
+        <h1 class="display-5 fw-bold">Achadinhos que Transformam seu Dia!</h1>
+        <p class="lead">Soluções, estilo e diversão com entrega rápida!</p>
+        <a href="#produtos" class="btn btn-laranja btn-lg">Confira os Produtos</a>
       </div>
     </section>
 
@@ -86,7 +140,7 @@
       <div class="container">
         <h2 class="text-center mb-5 display-5 fw-bold" id="produtos-heading">🛍️ <u>Nossos Achadinhos</u></h2>
         <div class="row g-4" id="lista-produtos">
-          </div>
+        </div>
       </div>
     </section>
 
@@ -98,7 +152,7 @@
             <div class="carousel-item active">
               <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
-                  <img src="https://via.placeholder.com/800x400?text=Promo%C3%A7%C3%A3o+Exclusiva" class="d-block w-100 rounded shadow-sm" alt="Banner de Promoção: 50% OFF em selecionados hoje!" loading="lazy">
+                  <img src="img/50.png" class="d-block w-100 rounded shadow-sm" alt="Banner de Promoção: 50% OFF em selecionados hoje!" loading="lazy">
                   <h3 class="mt-4 fw-bold">🎉 50% OFF EM SELECIONADOS HOJE!</h3>
                   <p class="text-laranja fw-bold fs-4">Aproveite! Últimas unidades por apenas R$ 99,90!</p>
                   <a href="#produtos" class="btn btn-outline-light bg-roxo btn-lg mt-3" aria-label="Ver produtos em promoção agora">Ver Produtos em Promoção</a>
@@ -108,9 +162,9 @@
             <div class="carousel-item">
               <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
-                  <img src="https://via.placeholder.com/800x400?text=Frete+Gr%C3%A1tis" class="d-block w-100 rounded shadow-sm" alt="Banner de Promoção: Frete Grátis para todo o Brasil!" loading="lazy">
-                  <h3 class="mt-4 fw-bold">🚚 Frete Grátis para todo o Brasil!</h3>
-                  <p class="text-roxo fw-bold fs-4">Em compras acima de R$ 150,00 - Não perca!</p>
+                  <img src="img/frete.png" class="d-block w-100 rounded shadow-sm" alt="Banner de Promoção: Frete Grátis para todo o Brasil!" loading="lazy">
+                  <h3 class="mt-4 fw-bold">🚚 Frete Grátis para toda Planaltina-DF!</h3>
+                  <p class="text-roxo fw-bold fs-4">Em compras acima de R$ 100,00 - Não perca!</p>
                   <a href="#produtos" class="btn btn-outline-light bg-laranja btn-lg mt-3" aria-label="Comprar agora e aproveitar o frete grátis">Comprar Agora e Ganhar Frete</a>
                 </div>
               </div>
@@ -128,24 +182,88 @@
       </div>
     </section>
 
+    <section id="diadospais" class="py-5 bg-laranja text-white" aria-labelledby="diadospais-heading">
+      <div class="container text-center">
+        <h2 class="mb-5 display-5 fw-bold" id="diadospais-heading">👨‍👧‍👦 <u>Homenagem ao Dia dos Pais</u></h2>
+        <p class="lead mb-5">Celebre o Dia dos Pais com tecnologia e inovação! Encontre o presente perfeito que ele vai amar.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+          <button class="btn btn-outline-light btn-lg filter-btn active" data-category="todos">Todos</button>
+          <button class="btn btn-outline-light btn-lg filter-btn" data-category="smartphones">Smartphones</button>
+          <button class="btn btn-outline-light btn-lg filter-btn" data-category="fones">Fones de Ouvido</button>
+          <button class="btn btn-outline-light btn-lg filter-btn" data-category="wearables">Wearables</button>
+          <button class="btn btn-outline-light btn-lg filter-btn" data-category="perifericos">Periféricos</button>
+          <button class="btn btn-outline-light btn-lg filter-btn" data-category="diversos">Diversos</button>
+        </div>
+        <div class="row g-4" id="lista-produtos-eletronicos">
+        </div>
+      </div>
+    </section>
+    
+    <section id="depoimentos" class="py-5 bg-cinza-claro" aria-labelledby="depoimentos-heading">
+      <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold" id="depoimentos-heading">💬 <u>O que dizem os nossos clientes</u></h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 testimonial-card shadow-sm">
+              <div class="card-body">
+                <p class="card-text">"Comprei um mouse e chegou super rápido, em perfeitas condições! O atendimento pelo WhatsApp foi excelente. Recomendo muito!"</p>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <img src="img/testemunha-jucy.png" class="rounded-circle me-3" alt="Foto do cliente João S.">
+                <div>
+                  <h6 class="mb-0">João S.</h6>
+                  <small class="text-muted">Cliente desde 2023</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 testimonial-card shadow-sm">
+              <div class="card-body">
+                <p class="card-text">"Os produtos são de ótima qualidade e o preço é muito justo. A entrega foi antes do prazo, e o suporte foi super atencioso!"</p>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <img src="img/teztemunhajucy1.png" class="rounded-circle me-3" alt="Foto da cliente Maria A.">
+                <div>
+                  <h6 class="mb-0">Maria A.</h6>
+                  <small class="text-muted">Cliente desde 2024</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 testimonial-card shadow-sm">
+              <div class="card-body">
+                <p class="card-text">"Estou impressionado com a agilidade e a facilidade de compra. Pedi um item de decoração e já estou pensando no próximo pedido. Parabéns à equipe!"</p>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <img src="img/wandim.png" class="rounded-circle me-3" alt="Foto do cliente Wanderson">
+                <div>
+                  <h6 class="mb-0">Wanderson Santos</h6>
+                  <small class="text-muted">Cliente recente</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="nossaessencia" class="py-5 bg-roxo text-white" aria-labelledby="nossa-essencia-heading">
       <div class="container text-center">
         <h2 class="mb-5 display-5 fw-bold" id="nossa-essencia-heading">🌟 Nossa Essência</h2>
-
         <div class="mb-4" role="region" aria-labelledby="missao-heading">
           <h3 class="fw-bold" id="missao-heading">💡 Missão</h3>
           <p class="lead">
             Oferecer soluções inteligentes e acessíveis para o dia a dia dos nossos clientes, com uma experiência de compra prática pelo WhatsApp, análise imediata de estoque e entrega rápida e personalizada de produtos de informática, brinquedos, decoração e utensílios domésticos.
           </p>
         </div>
-
         <div class="mb-4" role="region" aria-labelledby="visao-heading">
           <h3 class="fw-bold" id="visao-heading">🔭 Visão</h3>
           <p class="lead">
             Ser referência nacional em vendas online via WhatsApp, reconhecida pela agilidade, confiabilidade e atendimento humanizado, proporcionando praticidade e encantamento em cada entrega.
           </p>
         </div>
-
         <div class="mb-4" role="region" aria-labelledby="valores-heading">
           <h3 class="fw-bold" id="valores-heading">💎 Valores</h3>
           <ul class="list-unstyled lead">
@@ -156,6 +274,7 @@
             <li><strong>Qualidade:</strong> Selecionamos produtos com ótimo custo-benefício e utilidade real.</li>
             <li><strong>Personalização:</strong> Cada pedido é tratado de forma única, respeitando o perfil e as necessidades do cliente.</li>
           </ul>
+          <img src="img/jucy.gif" alt="InovaJucy" class="img-fluid mb-4 animate__fadeInUp" style="max-width: 200px;">
         </div>
       </div>
     </section>
@@ -185,28 +304,56 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-md-5">
-              <img src="" class="img-fluid rounded mb-3" id="modalProductImage" alt="Imagem do Produto Selecionado" loading="lazy">
-            </div>
-            <div class="col-md-7">
+            <div class="col-md-7 order-md-2">
               <h3 id="modalProductName" class="fw-bold text-roxo"></h3>
               <p class="lead text-laranja fw-bold" id="modalProductPrice"></p>
               <p id="modalProductDescription"></p>
               <hr>
               <p class="text-muted small">Entre em contato via WhatsApp para finalizar a compra e consultar a disponibilidade em tempo real. Nossa equipe responderá em minutos!</p>
             </div>
+            <div class="col-md-5 order-md-1">
+              <div id="modalProductImagesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" id="modalProductImagesCarouselInner">
+                </div>
+                <div id="modalProductImagesCarouselControls">
+                  <button class="carousel-control-prev" type="button" data-bs-target="#modalProductImagesCarousel" data-bs-slide="prev" aria-label="Imagem anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#modalProductImagesCarousel" data-bs-slide="next" aria-label="Próxima imagem">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                  </button>
+                </div>
+              </div>
+              <div id="modalProductVideoContainer" class="mt-3" style="display: none;">
+              </div>
+            </div>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          <a href="#" id="whatsappBuyButton" target="_blank" rel="noopener noreferrer" class="btn btn-success" aria-label="Comprar este produto via WhatsApp"><i class="fab fa-whatsapp me-2" aria-hidden="true"></i>Comprar via WhatsApp</a>
+          <a href="#" id="whatsappBuyButton" target="_blank" rel="noopener noreferrer" class="btn btn-success" aria-label="Comprar este produto via WhatsApp"><i class="fab fa-whatsapp me-2" aria-hidden="true"></i>Comprar ou Saber Mais via WhatsApp</a>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/js.js" defer></script>
   <script src="js/scripts.js" defer></script>
+  <script src="js/diadospais.js" defer></script>
 </body>
 </html>
