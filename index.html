@@ -33,27 +33,34 @@
   <link rel="stylesheet" href="css/css.css">
   <link rel="stylesheet" href="css/style.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-8G31FX78HS"></script>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8G31FX78HS');
-  </script>
+  <!-- Google Analytics - Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0JHXCS47SH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <button type="button" id="hs_show_banner_button"
-    style="background-color: #425b76; border: 1px solid #425b76;
-    border-radius: 3px; padding: 10px 16px; text-decoration: none; color: #fff;
-    font-family: inherit; font-size: inherit; font-weight: normal; line-height: inherit;
-    text-align: left; text-shadow: none;"
-    onClick="(function(){
+  // Configuração do Google Analytics
+  gtag('config', 'G-0JHXCS47SH');
+</script>
+
+<!-- Botão único para configurações de cookies (HubSpot) -->
+<button type="button" id="hs_show_banner_button"
+  style="background-color: #425b76; border: 1px solid #425b76;
+         border-radius: 3px; padding: 10px 16px; text-decoration: none; color: #fff;
+         font-family: inherit; font-size: inherit; font-weight: normal; line-height: inherit;
+         text-align: left; text-shadow: none;"
+  onClick="(function(){
     var _hsp = window._hsp = window._hsp || [];
     _hsp.push(['showBanner']);
-    })()"
-  >
-    Configurações de cookies
-  </button>
+  })()"
+>
+  Configurações de cookies
+</button>
 
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/50308008.js"></script>
+<!-- HubSpot tracking script -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/50308008.js"></script>
+
 </head>
 <body>
 <header>
@@ -112,7 +119,7 @@
       <div class="mt-4">
         <p class="fw-bold">Siga-nos:</p>
         <div class="d-flex gap-3">
-          <a href="https://wa.me/5561999788904" class="text-white fs-4" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://wa.me/5561999602738" class="text-white fs-4" target="_blank"><i class="bi bi-whatsapp"></i></a>
           <a href="https://www.instagram.com/inovajucyachadinhos" class="text-white fs-4" target="_blank"><i class="bi bi-instagram"></i></a>
           <a href="https://www.facebook.com/inovajucyachadinhos" class="text-white fs-4" target="_blank"><i class="bi bi-facebook"></i></a>
         </div>
@@ -129,7 +136,7 @@
 <main>
     <section id="home" class="hero bg-roxo text-white py-5 d-flex align-items-center min-vh-100" aria-labelledby="home-heading">
       <div class="container text-center animate__animated animate__fadeInUp">
-        <img src="img/logo.png" alt="InovaJucy" class="img-fluid mb-4 animate__fadeInUp" style="max-width: 200px;">
+        <img src="img/inovajucyachadinhos-logo.gif" alt="InovaJucy" class="img-fluid mb-4 animate__fadeInUp" style="max-width: 200px;">
         <h1 class="display-5 fw-bold">Achadinhos que Transformam seu Dia!</h1>
         <p class="lead">Soluções, estilo e diversão com entrega rápida!</p>
         <a href="#produtos" class="btn btn-laranja btn-lg">Confira os Produtos</a>
@@ -186,14 +193,20 @@
       <div class="container text-center">
         <h2 class="mb-5 display-5 fw-bold" id="diadospais-heading">👨‍👧‍👦 <u>Homenagem ao Dia dos Pais</u></h2>
         <p class="lead mb-5">Celebre o Dia dos Pais com tecnologia e inovação! Encontre o presente perfeito que ele vai amar.</p>
-        <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
-          <button class="btn btn-outline-light btn-lg filter-btn active" data-category="todos">Todos</button>
-          <button class="btn btn-outline-light btn-lg filter-btn" data-category="smartphones">Smartphones</button>
-          <button class="btn btn-outline-light btn-lg filter-btn" data-category="fones">Fones de Ouvido</button>
-          <button class="btn btn-outline-light btn-lg filter-btn" data-category="wearables">Wearables</button>
-          <button class="btn btn-outline-light btn-lg filter-btn" data-category="perifericos">Periféricos</button>
-          <button class="btn btn-outline-light btn-lg filter-btn" data-category="diversos">Diversos</button>
-        </div>
+        <div class="input-group mb-3">
+    <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar produtos...">
+    <button class="btn btn-outline-secondary" type="button" id="searchButton">Buscar</button>
+</div>
+
+<div class="d-flex justify-content-center mb-4">
+    <button class="btn btn-secondary filter-btn active me-2" data-category="todos">Todos</button>
+    <button class="btn btn-secondary filter-btn me-2" data-category="fones">Fones</button>
+    <button class="btn btn-secondary filter-btn me-2" data-category="perifericos">Periféricos</button>
+    <button class="btn btn-secondary filter-btn me-2" data-category="diversos">Diversos</button>
+</div>
+
+<div id="lista-produtos-eletronicos" class="row">
+    </div>
         <div class="row g-4" id="lista-produtos-eletronicos">
         </div>
       </div>
@@ -281,19 +294,35 @@
   </main>
 
   <footer class="py-4 bg-dark text-white" role="contentinfo">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          <p class="mb-0">© <span id="current-year"></span> InovaJucyAchadinhos. Todos os direitos reservados.</p>
-        </div>
-        <div class="col-md-6 text-center text-md-end">
-          <a href="https://www.facebook.com/inovajucyachadinhos" target="_blank" rel="noopener noreferrer" aria-label="Visite nossa página no Facebook" class="text-white me-3 social-icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/inovajucyachadinhos" target="_blank" rel="noopener noreferrer" aria-label="Siga-nos no Instagram" class="text-white me-3 social-icon"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="https://wa.me/5561999602738" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp" class="text-white social-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-        </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <p class="mb-0">© <span id="current-year"></span> InovaJucyAchadinhos. Todos os direitos reservados.<br>
+          Criado com 💡 e performance por 
+          <a href="https://wandersonweb.com.br" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-info fw-bold">
+            WandersonWeb
+          </a>.
+        </p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <a href="https://www.facebook.com/inovajucyachadinhos" target="_blank" rel="noopener noreferrer" aria-label="Visite nossa página no Facebook" class="text-white me-3 social-icon">
+          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/inovajucyachadinhos" target="_blank" rel="noopener noreferrer" aria-label="Siga-nos no Instagram" class="text-white me-3 social-icon">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://wa.me/5561999602738" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp" class="text-white social-icon">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
+<script>
+  // Atualiza o ano automaticamente
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
   <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">

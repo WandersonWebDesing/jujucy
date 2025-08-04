@@ -399,6 +399,32 @@ section h2 u {
   transform: translateY(-3px);
 }
 
+.btn-acessibilidade {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  background-color: #004aad; /* azul forte padrão WandersonWeb */
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-acessibilidade:hover {
+  background-color: #002d6b; /* tom mais escuro ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+
+
+
 /* Icones de Acessibilidade e Libras (Novo) */
 .acessibilidade-flutuante {
   position: fixed;
