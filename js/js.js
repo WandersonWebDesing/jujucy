@@ -173,26 +173,26 @@ O Mini Compressor de Ar Digital Lotus LT-A524 é compacto, potente e indispensá
 },
 
 {
-  id: 'chromecast-hd',
-  name: '📺📲 Google Chromecast 3ª Geração – Transforme sua TV',
-  price: 180.00,
+  id: 'tv-stick-transforme',
+  name: '📺🔥 TV Stick – Transforme Sua TV em Smart',
+  price: 139.90,
   originalPrice: 219.00, // Preço promocional
   images: [
-    'img/chomecas.webp',
-    'img/chomecast.png',
-    'img/chomecast1.jpg'
+    'img/sticktv.png',
+    'img/tvstick.jpeg'
   ],
   video: '',
   description: `
-    🌐 Deixe a TV do seu pai super inteligente!  
-    📲 Transmita vídeos, músicas e apps direto do celular  
-    🎥 Compatível com YouTube, Netflix, Spotify, Disney+ e muito mais  
-    🖥️ Conexão simples e rápida com qualquer TV com HDMI
+    🎁 Presenteie neste Dia dos Pais com tecnologia e diversão!  
+    🌐 Transforme qualquer TV com entrada HDMI em uma Smart TV  
+    📱 Espelhe vídeos, músicas e apps direto do seu celular  
+    🎬 Acesse YouTube, Netflix, Disney+, Spotify e muito mais  
+    ⚡ Instalação fácil e rápida – plugou, usou!  
 
-    Entretenimento garantido para toda a família!
+    Ideal para maratonar séries, curtir músicas ou assistir futebol com a família.
   `,
   category: 'diversos',
-  whatsappText: 'Olá! Tenho interesse em saber mais e o valor do Google Chromecast 3a Geração (R$ 180,00) para o Dia dos Pais. Poderiam me ajudar com a compra e informações sobre a entrega?'
+  whatsappText: 'Olá! Tenho interesse no TV Stick para transformar a TV em Smart, vi que está por R$ 139,90 na promoção de Dia dos Pais. Pode me passar mais detalhes e como funciona a entrega?'
 },
 
    {

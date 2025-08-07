@@ -1,22 +1,62 @@
+/*
+  ======================================================
+  Arquivo CSS - Inovajucy Achadinhos
+  ======================================================
+  
+  Este arquivo contém os estilos globais e específicos
+  para a identidade visual da Inovajucy Achadinhos.
+  A paleta de cores e a tipografia foram definidas
+  para criar uma experiência de usuário atraente e
+  consistente, com foco em persuasão e funcionalidade.
+*/
+
+/* ---------------------------------------------------- */
+/* 1. VARIÁVEIS DE COR E FONTES */
+/* ---------------------------------------------------- */
 :root {
+  /* Paleta de Cores Inovajucy */
   --roxo-inovajucy: #5e2a84;
   --laranja-inovajucy: #ff914d;
   --cinza-claro-inovajucy: #f8f9fa;
   --cor-azul-marinho-mes-dos-homens: #003366;
   --cor-roxo-diadospais: #420658;
+
+  /* Cores de apoio (hover, sombra, etc) */
+  --laranja-hover: #e96a00;
+  --sombra-card: rgba(0, 0, 0, 0.15);
+  --sombra-heroi: rgba(0, 0, 0, 0.4);
+
+  /* Fontes */
+  --fonte-principal: 'Poppins', sans-serif;
 }
 
-/* Estilos Gerais */
+/* ---------------------------------------------------- */
+/* 2. ESTILOS GERAIS E TIPOGRAFIA */
+/* ---------------------------------------------------- */
 body {
-  font-family: 'Poppins', sans-serif;
-  padding-top: 66px; /* Para compensar a navbar fixa */
+  font-family: var(--fonte-principal);
+  padding-top: 66px; /* Compensação para a navbar fixa */
+  color: #333;
+  background-color: white;
 }
 
 section {
   padding: 80px 0;
 }
 
-/* Classes de Cores e Estilos */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--roxo-inovajucy);
+}
+
+p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------------- */
+/* 3. CLASSES DE CORES E ESTILOS INOVAJUCY */
+/* ---------------------------------------------------- */
 .bg-roxo {
   background-color: var(--roxo-inovajucy) !important;
 }
@@ -32,20 +72,28 @@ section {
 .btn-laranja {
   background-color: var(--laranja-inovajucy);
   color: white;
-  border-color: var(--laranja-inovajucy);
-  border-radius: 0 0.5rem 0.5rem 0;
+  border: 1px solid var(--laranja-inovajucy);
+  border-radius: 0.5rem;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn-laranja:hover {
-  background-color: #e96a00;
-  border-color: #e96a00;
+  background-color: var(--laranja-hover);
+  border-color: var(--laranja-hover);
   color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .text-laranja {
   color: var(--laranja-inovajucy) !important;
 }
 
+/* ---------------------------------------------------- */
+/* 4. COMPONENTES: NAVBAR E HERO */
+/* ---------------------------------------------------- */
 /* Navbar */
 .navbar-brand img {
   max-height: 40px;
@@ -53,20 +101,22 @@ section {
 }
 
 .navbar-brand img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1); /* Efeito de escala mais pronunciado */
 }
 
 .navbar-nav .nav-link {
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  color: var(--roxo-inovajucy);
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--laranja-inovajucy) !important;
+  transform: translateY(-2px); /* Efeito sutil de elevação */
 }
 
-/* Hero Section */
+/* Hero Section (Seção de Destaque) */
 .hero {
   min-height: calc(100vh - 66px);
   display: flex;
@@ -86,63 +136,81 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--sombra-heroi);
   z-index: -1;
 }
 
 .hero h1 {
   font-size: 3.5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  animation: fadeInDown 1s ease-out; /* Animação de entrada */
 }
 
 .hero p.lead {
   font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
   max-width: 700px;
   margin: 0 auto 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  animation: fadeInUp 1s ease-out 0.5s backwards; /* Animação com delay */
 }
 
-/* Títulos de Seção */
+/* ---------------------------------------------------- */
+/* 5. TÍTULOS E COMPONENTES DE CONTEÚDO */
+/* ---------------------------------------------------- */
+/* Títulos de Seção Persuasivos */
 section h2 {
   font-size: 2.8rem;
-  font-weight: bold;
+  font-weight: 800;
   position: relative;
   display: inline-block;
   margin-bottom: 3rem;
+  color: var(--roxo-inovajucy);
 }
 
 section h2 u {
   text-decoration-color: var(--laranja-inovajucy);
-  text-decoration-thickness: 3px;
-  text-underline-offset: 8px;
+  text-decoration-thickness: 5px; /* Sublinhado mais destacado */
+  text-underline-offset: 10px;
+  text-decoration-style: wavy; /* Estilo para dar um toque criativo */
 }
 
-/* Cards de Produto e Depoimento */
+/* Cards de Produto e Depoimento (efeito de movimento) */
 .product-card,
 .testimonial-card,
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
   overflow: hidden;
+  border-radius: 1rem;
 }
 
 .product-card:hover,
 .testimonial-card:hover,
 .card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-10px) scale(1.05); /* Efeito de elevação mais impactante */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25) !important; /* Sombra mais profunda */
   cursor: pointer;
 }
 
 .product-card img {
   object-fit: cover;
   height: 200px;
+  border-bottom: 3px solid var(--laranja-inovajucy); /* Destaque no card */
+}
+
+.product-card .card-body {
+  min-height: 180px; /* Altura mínima para evitar desalinhamento */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card .card-title {
-  min-height: 50px;
-}
-
-.product-card .card-text {
-  min-height: 40px;
+  font-weight: 700;
+  color: var(--roxo-inovajucy);
 }
 
 /* Carrossel de Promoções */
@@ -150,82 +218,130 @@ section h2 u {
   max-height: 450px;
   object-fit: cover;
   margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 #promoCarousel .carousel-control-prev-icon,
 #promoCarousel .carousel-control-next-icon {
   background-color: var(--roxo-inovajucy);
   border-radius: 50%;
-  padding: 1rem;
+  padding: 1.5rem; /* Ícones maiores */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-/* Newsletter */
+#promoCarousel .carousel-control-prev-icon:hover,
+#promoCarousel .carousel-control-next-icon:hover {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------- */
+/* 6. NEWSLETTER E FORMULÁRIOS */
+/* ---------------------------------------------------- */
 #contato .form-control {
   border-radius: 0.5rem 0 0 0.5rem;
-  border: none;
+  border: 2px solid var(--cinza-claro-inovajucy); /* Borda sutil */
+  padding: 12px 15px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#contato .form-control:focus {
+  border-color: var(--laranja-inovajucy);
+  box-shadow: 0 0 0 0.2rem rgba(255, 145, 77, 0.25);
+  outline: none;
 }
 
 #contato .btn-laranja {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-/* Botões sociais e de contato */
+/* ---------------------------------------------------- */
+/* 7. BOTÕES E ÍCONES FLUTUANTES (Persuasão e Ação) */
+/* ---------------------------------------------------- */
+/* Ícones sociais no rodapé */
 .social-icon,
 .social-hover {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Ícones maiores e mais visíveis */
+  color: var(--roxo-inovajucy);
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icon:hover,
 .social-hover:hover {
   color: var(--laranja-inovajucy) !important;
-  transform: translateY(-3px) scale(1.2);
+  transform: translateY(-5px) scale(1.3); /* Efeito de pulo */
 }
 
+/* Botão Flutuante de WhatsApp (Melhorado para Ação) */
 .whatsapp-fixo {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 28px;
   z-index: 9999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25D366; /* Cor oficial do WhatsApp */
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  animation: bounce 2s infinite ease-in-out; /* Animação de pulo para chamar atenção */
+  transition: all 0.3s ease;
+}
+
+.whatsapp-fixo i {
+  font-size: 24px;
 }
 
 .whatsapp-fixo:hover {
-  transform: scale(1.1);
   background-color: #1ebe5d;
-  text-decoration: none;
+  transform: scale(1.1);
+  animation: none; /* Pausa a animação ao passar o mouse */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Grupo flutuante de redes sociais no canto inferior direito */
 .redes-flutuantes {
   position: fixed;
   bottom: 20px;
-  right: 15px;
+  right: 20px;
   z-index: 1050;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .btn-social {
+  width: 50px;
+  height: 50px;
   background-color: var(--roxo-inovajucy);
   color: white;
   border-radius: 50%;
-  font-size: 1.3rem;
-  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s, background-color 0.3s;
-  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .btn-social:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(10deg); /* Efeito de rotação */
 }
 
 .btn-social.whatsapp:hover {
@@ -240,54 +356,66 @@ section h2 u {
   background-color: #3b5998;
 }
 
-/* Modal de Produto */
+/* ---------------------------------------------------- */
+/* 8. MODAL DE PRODUTO */
+/* ---------------------------------------------------- */
 #productModal .modal-header {
   border-bottom: none;
 }
 
 #productModal .modal-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--roxo-inovajucy);
 }
 
 #productModal .modal-body img {
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
 }
 
 #productModal .modal-footer {
   border-top: none;
 }
 
-/* Seção de Depoimentos */
+/* ---------------------------------------------------- */
+/* 9. SEÇÕES TEMÁTICAS (DEPOIMENTOS, HOMENAGEM) */
+/* ---------------------------------------------------- */
 #depoimentos {
   background-color: var(--cinza-claro-inovajucy);
 }
 
 .testimonial-card {
   border: none;
-  border-radius: 1rem;
+  border-radius: 1.5rem; /* Borda mais arredondada */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .testimonial-card .card-body {
   font-style: italic;
   color: #495057;
-  padding: 2rem;
+  padding: 2.5rem;
+  font-size: 1.1rem;
 }
 
 .testimonial-card .card-footer {
-  background-color: transparent;
+  background-color: white;
   border-top: 1px solid #e9ecef;
-  padding: 1.5rem 2rem;
+  padding: 2rem 2.5rem;
 }
 
 .testimonial-card .card-footer img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--laranja-inovajucy);
 }
 
 .testimonial-card .card-footer h6 {
   color: var(--cor-roxo-diadospais);
-  font-weight: 600;
+  font-weight: 700;
+  margin-top: 5px;
 }
 
 /* Seção de Homenagem (Dia dos Pais / Mês dos Homens) */
@@ -295,12 +423,13 @@ section h2 u {
   padding: 80px 0;
   text-align: center;
   background: linear-gradient(135deg, var(--cor-roxo-diadospais), #2a0437);
-  color: var(--cor-branco);
+  color: white; /* Cor do texto alterada para branco */
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Efeito de brilho na seção */
 #diadospais::before {
   content: '';
   position: absolute;
@@ -308,15 +437,15 @@ section h2 u {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: pulsar 20s infinite ease-in-out;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%); /* Opacidade aumentada */
+  animation: pulsar 25s infinite ease-in-out;
   z-index: 0;
 }
 
 @keyframes pulsar {
-  0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
-  50% { transform: scale(1.2) rotate(180deg); opacity: 0.6; }
-  100% { transform: scale(1) rotate(360deg); opacity: 0.8; }
+  0% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+  100% { transform: scale(1) rotate(360deg); opacity: 1; }
 }
 
 #diadospais-content {
@@ -325,44 +454,46 @@ section h2 u {
 }
 
 #diadospais-heading {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 900;
   margin-bottom: 25px;
   position: relative;
   display: inline-block;
   color: var(--laranja-inovajucy);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 #diadospais-heading u {
   text-decoration: none;
-  border-bottom: 5px solid var(--cinza-claro-inovajucy);
-  padding-bottom: 8px;
+  border-bottom: 5px solid var(--laranja-inovajucy); /* Borda laranja para destaque */
+  padding-bottom: 10px;
 }
 
 #diadospais .lead {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   max-width: 900px;
   margin: 0 auto 50px;
   font-style: italic;
   font-weight: 300;
   line-height: 1.6;
+  color: white;
 }
 
 .mes-dos-homens-titulo {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--cor-azul-marinho-mes-dos-homens);
   margin-top: 30px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Botões de filtro */
+/* Botões de filtro (com efeito de preenchimento) */
 .filter-btn {
   border: 2px solid var(--laranja-inovajucy);
-  color: var(--cor-branco);
-  background-color: rgba(255, 255, 255, 0.1);
+  color: white; /* Cor do texto inicial branca para contraste */
+  background-color: transparent;
   padding: 15px 30px;
   border-radius: 50px;
   font-weight: 700;
@@ -396,36 +527,13 @@ section h2 u {
 .filter-btn.active {
   color: white;
   border-color: var(--laranja-inovajucy);
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 5px 15px rgba(255, 145, 77, 0.3);
 }
 
-.btn-acessibilidade {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  z-index: 9999;
-  background-color: #004aad; /* azul forte padrão WandersonWeb */
-  color: #fff;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 8px 0 0 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-acessibilidade:hover {
-  background-color: #002d6b; /* tom mais escuro ao passar o mouse */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-
-
-
-
-/* Icones de Acessibilidade e Libras (Novo) */
+/* ---------------------------------------------------- */
+/* 10. ACESSIBILIDADE E LIBRAS (FLUTUANTES) */
+/* ---------------------------------------------------- */
 .acessibilidade-flutuante {
   position: fixed;
   bottom: 20px;
@@ -462,7 +570,9 @@ section h2 u {
   background-color: var(--laranja-inovajucy); /* Laranja de destaque */
 }
 
-/* Responsividade */
+/* ---------------------------------------------------- */
+/* 11. RESPONSIVIDADE */
+/* ---------------------------------------------------- */
 @media (max-width: 992px) {
   #diadospais {
     padding: 60px 0;
@@ -545,5 +655,28 @@ section h2 u {
   }
   #contato .form-control {
     margin-bottom: 10px;
+  }
+}
+
+/* Animações Persuasivas para Elementos (visibilidade, movimento) */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
